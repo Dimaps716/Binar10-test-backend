@@ -9,10 +9,11 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os 
 import environ
 
 from pathlib import Path
+from datetime import timedelta
 
 
 # reading .env file
@@ -49,7 +50,6 @@ INSTALLED_APPS = [
 
     # Mis app
     'users',
-    'auth',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
 ]
@@ -164,6 +164,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+}
 
 SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=15),

@@ -4,3 +4,6 @@ psycopg2-binary>=2.8
 django-environ==0.4.5
 djangorestframework==3.12.4
 djangorestframework-simplejwt==4.7.1
+django-filter==2.4.0
+drf-flex-fields==0.8.6
+django-cors-headers==3.5.0

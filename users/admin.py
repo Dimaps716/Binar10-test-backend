@@ -1,9 +1,8 @@
 from django.contrib import admin
-from .models import User
+from  users import models
 
-@admin.register(User)
-class ProductAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'Nombre', 'content', )
+class UserAdmin(admin.ModelAdmin):
+    list_display =('Nombre', 'Cedula', 'Entidad_de_salud')
     list_filter = ('Nombre', )
 
-admin.site.register(User)
+admin.site.register(models.User)

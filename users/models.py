@@ -3,12 +3,12 @@ from django.contrib.auth.models import User
 
 
 class User(models.Model):
-    Nombre = models.CharField(max_length=15, notnull=True)
-    Apellido =models.CharField(max_length=10, notnull=True)
-    Email = models.CharField(max_length=50, unique=True, notnull=True)
-    Cedula = models.IntegerField(max_length=30, notnull=True)
+    Nombre = models.CharField(max_length=15, null=True)
+    Apellido =models.CharField(max_length=10, null=True)
+    Email = models.CharField(max_length=50, unique=True, null=True)
+    Cedula = models.IntegerField( null=True)
     Img = models.ImageField()
-    Pais = models.charfield(max_length=50)
+    Pais = models.CharField(max_length=50)
     Entidad_de_salud = models.CharField(max_length=80)
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
